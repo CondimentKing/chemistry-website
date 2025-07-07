@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chemistry Concepts</title>
+  <script src="https://cdn.tailwindcss.com "></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow-lg p-6 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold">Foundational Chemistry Concepts</h1>
+    <p class="mt-2 text-lg opacity-90">Master stoichiometry, equilibrium, atomic structure, and periodic trends</p>
+  </header>
+
+  <!-- Tabs -->
+  <div class="flex flex-wrap justify-center gap-4 mt-6 mb-6">
+    <button onclick="showTab('stoichiometry')" class="px-4 py-2 bg-indigo-600 text-white rounded-full">Stoichiometry</button>
+    <button onclick="showTab('equilibrium')" class="px-4 py-2 bg-indigo-600 text-white rounded-full">Equilibrium</button>
+    <button onclick="showTab('atomic')" class="px-4 py-2 bg-indigo-600 text-white rounded-full">Atomic Structure</button>
+    <button onclick="showTab('trends')" class="px-4 py-2 bg-indigo-600 text-white rounded-full">Periodic Trends</button>
+  </div>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 space-y-6 mb-12">
+
+    <section id="stoichiometry" class="content-section">
+      <h2 class="text-2xl font-bold mb-2 text-indigo-700">Stoichiometry</h2>
+      <p>Stoichiometry is the calculation of reactants and products in chemical reactions based on the law of conservation of mass.</p>
+      <h3 class="font-semibold mt-4">Example:</h3>
+      <pre class="bg-gray-100 p-2 rounded mt-2 text-sm">N₂ + 3H₂ → 2NH₃</pre>
+      <ul class="list-disc ml-6 mt-2">
+        <li>1 mole of nitrogen reacts with 3 moles of hydrogen to produce 2 moles of ammonia</li>
+        <li>Mole ratios are used to convert between quantities of substances</li>
+        <li>Used for determining limiting reagents, theoretical yields, and percent yields</li>
+      </ul>
+    </section>
+
+    <section id="equilibrium" class="content-section hidden">
+      <h2 class="text-2xl font-bold mb-2 text-indigo-700">Chemical Equilibrium</h2>
+      <p>A dynamic state where forward and reverse reaction rates are equal, resulting in no net change in concentrations over time.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li><strong>Equilibrium constant (K):</strong> K = [Products]/[Reactants]</li>
+        <li><strong>Le Chatelier’s Principle:</strong> System shifts to counteract stress</li>
+        <li><strong>Reaction Quotient (Q):</strong> Predicts direction before equilibrium</li>
+      </ul>
+    </section>
+
+    <section id="atomic" class="content-section hidden">
+      <h2 class="text-2xl font-bold mb-2 text-indigo-700">Atomic Structure & Orbitals</h2>
+      <p>Atoms consist of protons, neutrons, and electrons. Electrons occupy orbitals around the nucleus.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li><strong>Protons:</strong> Positive charge, in the nucleus</li>
+        <li><strong>Neutrons:</strong> Neutral charge, also in the nucleus</li>
+        <li><strong>Electrons:</strong> Negative charge, found in orbitals</li>
+      </ul>
+    </section>
+
+    <section id="trends" class="content-section hidden">
+      <h2 class="text-2xl font-bold mb-2 text-indigo-700">Periodic Trends</h2>
+      <p>Patterns in element properties across the periodic table.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li><strong>Atomic Radius:</strong> Decreases across a period, increases down a group</li>
+        <li><strong>Ionic Radius:</strong> Depends on cation/anion status</li>
+        <li><strong>Ionization Energy:</strong> Increases across a period</li>
+        <li><strong>Electronegativity:</strong> Increases across a period</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-600 text-white text-center py-4">
+    <p>© Chemistry Education | Learn the fundamentals of chemistry</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.content-section').forEach(el => el.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
